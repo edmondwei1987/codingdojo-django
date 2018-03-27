@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Book Reviews</title>
+  </head>
+  <body>
+    <h1>Welcome!</h1>
+    {%if messages%}
+      <ul>
+        {%for message in messages%}
+        <li>{{message}}</li>
+        {%endfor%}
+      </ul>
+    {%endif%}
+    <h3>Register</h3>
+    <form class="" action="/book_review/regist" method="post">
+      {%csrf_token%}
+      <p>Name: <input type="text" name="name" value=""> </p>
+      <p>Email: <input type="text" name="email" value=""> </p>
+      <p>Password: <input type="text" name="password" value=""> </p>
+      <p>Confirm PW: <input type="text" name="cpassword" value=""> </p>
+      <p> <input type="submit" name="" value="Regist"> </p>
+    </form>
+    <h3>Login</h3>
+    <form class="" action="/book_review/login" method="post">
+      {%csrf_token%}
+      <p>Email: <input type="text" name="email" value=""> </p>
+      <p>Password: <input type="text" name="password" value=""> </p>
+      <p> <input type="submit" name="" value="Login"> </p>
+    </form>
+  </body>
+</html>

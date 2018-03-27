@@ -1,0 +1,9 @@
+div{
+  border: solid black 1px;
+  height:100px;
+  width:300px;
+  display: inline-block;
+}
+body,h1,form,div{
+  text-align: center;
+}

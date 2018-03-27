@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Book</title>
+  </head>
+  <body>
+    <h1>Divergent</h1>
+    <p>Author:{{book.author.name}}</p>
+    <p>Reviews:</p>
+    {%for review in reviews%}
+    <p>--------------------------------------------</p>
+    <p>Rating:{{review.rating}}</p>
+    <p> <a href="/book_review/user/{{review.user.id}}">{{review.user.name}}</a>  says: {{review.content}}</p>
+    <p>Post on {{review.created_at}}</p>
+    {%if review.user.id == request.session.user_id%}
+      <p> <a href="{{review.user.id}}">Delete Review</a></p>
+    {%endif%}
+    {%endfor%}
+  </body>
+</html>

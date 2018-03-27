@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login|Register</title>
+  </head>
+  <body>
+    {%if messages%}
+    <ul>
+      {%for message in messages%}
+      <li>{{message}}</li>
+      {%endfor%}
+    </ul>
+    {%endif%}
+    <h1>Registration</h1>
+    <form class="" action="/log_reg/regist" method="post">
+      {%csrf_token%}
+      <p>First Name: <input type="text" name="first_name" value=""> </p>
+      <p>Last Name: <input type="text" name="last_name" value=""> </p>
+      <p>Email Name: <input type="text" name="email" value=""> </p>
+      <p>Password: <input type="text" name="password" value=""> </p>
+      <p>Confirm pw: <input type="text" name="cpassword" value=""> </p>
+      <p><input type="submit" name="" value="Register"> </p>
+    </form>
+    <h1>Login</h1>
+    <form class="" action="/log_reg/login" method="post">
+      {%csrf_token%}
+      <p>Email: <input type="text" name="email" value=""> </p>
+      <p>Password: <input type="text" name="password" value=""> </p>
+      <p> <input type="submit" name="" value="Login"> </p>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+#bookstoreview{
+  overflow: scroll;
+  width:200px;
+  height:130px;
+}
+.logout{
+  text-align: right;
+}
+p{
+  vertical-align: top;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Amadon</title>
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'amadon/style.css'%}">
+  </head>
+  <body>
+    <h1>Amadon Store</h1>
+    <table>
+      <tr>
+        <td>Item</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td>Actions</td>
+      </tr>
+      <tr>
+        <td>Dojo Tshirt</td>
+        <td>$19.99</td>
+        <form class="" action="/amadon/buy" method="post">
+          {%csrf_token%}
+          <td>
+            <select class="" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </td>
+          <td>
+            <input type="submit" value="BUY">
+          </td>
+          <input type="hidden" name="product_id" value="001">
+        </form>
+      </tr>
+      <tr>
+        <td>Dojo Cup</td>
+        <td>$4.99</td>
+        <form class="" action="/amadon/buy" method="post">
+          {%csrf_token%}
+          <td>
+            <select class="" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </td>
+          <td>
+            <input type="submit" value="BUY">
+          </td>
+          <input type="hidden" name="product_id" value="002">
+        </form>
+      </tr>
+      <tr>
+        <td>Dojo Sweater</td>
+        <td>$29.99</td>
+        <form class="" action="/amadon/buy" method="post">
+          {%csrf_token%}
+          <td>
+            <select class="" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </td>
+          <td>
+            <input type="submit" value="BUY">
+          </td>
+          <input type="hidden" name="product_id" value="003">
+        </form>
+      </tr>
+    </table>
+  </body>
+</html>

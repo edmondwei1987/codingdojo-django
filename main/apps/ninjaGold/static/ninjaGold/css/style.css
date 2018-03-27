@@ -1,0 +1,21 @@
+.location{
+  display: inline-block;
+  border:solid black 1px;
+  width:200px;
+  height:150px;
+  text-align: center;
+}
+h2{
+  color:green;
+}
+#activities{
+  overflow: scroll;
+  width:820px;
+  height: 200px;
+}
+.win{
+  color:green;
+}
+.lose{
+  color:red;
+}
